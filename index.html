@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisabeth-Selbert-Gesamtschule - Lernplattform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Onboarding Modal -->
+    <div id="onboarding-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="onboarding-slides">
+                <div class="slide active">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>Willkommen auf der Lernplattform!</h2>
+                    <p>Hier findest du alle wichtigen Informationen zu deinen Fächern: Informatik, Deutsch und Sport.</p>
+                </div>
+                <div class="slide">
+                    <i class="fas fa-book-open"></i>
+                    <h2>Lehrpläne & Prüfungstermine</h2>
+                    <p>Jedes Fach enthält den aktuellen Lehrplan, wichtige Prüfungstermine und Übungsprüfungen.</p>
+                </div>
+                <div class="slide">
+                    <i class="fas fa-laptop-code"></i>
+                    <h2>Interaktive Übungen</h2>
+                    <p>Nutze die digitalen interaktiven Übungen, um dein Wissen zu vertiefen und dich optimal vorzubereiten.</p>
+                </div>
+                <div class="slide">
+                    <i class="fas fa-envelope"></i>
+                    <h2>Kontakt</h2>
+                    <p>Bei Fragen kannst du mich jederzeit per E-Mail oder Microsoft Teams erreichen.</p>
+                </div>
+            </div>
+            <div class="onboarding-controls">
+                <button id="prev-slide" class="btn-secondary">Zurück</button>
+                <div class="slide-indicators"></div>
+                <button id="next-slide" class="btn-primary">Weiter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="assets/logo.jpeg" alt="ESG Logo" class="logo" id="school-logo">
+                <span class="school-name">ESG Bonn</span>
+            </div>
+            <button class="nav-toggle" aria-label="Navigation umschalten">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Start</a></li>
+                <li><a href="#informatik" class="nav-link">Informatik</a></li>
+                <li><a href="#deutsch" class="nav-link">Deutsch</a></li>
+                <li><a href="#sport" class="nav-link">Sport</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Theme wechseln">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Willkommen zur Lernplattform</h1>
+                <p class="hero-subtitle">Elisabeth-Selbert-Gesamtschule, Bonn</p>
+                <p class="hero-description">Deine zentrale Anlaufstelle für Informatik, Deutsch und Sport</p>
+                <button id="start-onboarding" class="btn-primary btn-large">
+                    <i class="fas fa-play-circle"></i> Einführung starten
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informatik Section -->
+    <section id="informatik" class="subject-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-laptop-code subject-icon"></i>
+                <h2>Informatik</h2>
+            </div>
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Lehrplan</h3>
+                    <p>Aktuelle Themen und Lernziele im Überblick</p>
+                    <ul class="curriculum-list">
+                        <li>Programmierung mit Python</li>
+                        <li>Datenstrukturen & Algorithmen</li>
+                        <li>Webentwicklung (HTML, CSS, JavaScript)</li>
+                        <li>Datenbanken & SQL</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Details ansehen</a>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Prüfungstermine</h3>
+                    <p>Wichtige Termine im Schuljahr</p>
+                    <div class="exam-dates">
+                        <div class="exam-date">
+                            <span class="date">15.03.2026</span>
+                            <span class="exam-name">Klassenarbeit 1</span>
+                        </div>
+                        <div class="exam-date">
+                            <span class="date">24.05.2026</span>
+                            <span class="exam-name">Klassenarbeit 2</span>
+                        </div>
+                        <div class="exam-date">
+                            <span class="date">12.07.2026</span>
+                            <span class="exam-name">Abschlussprüfung</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Übungsprüfungen</h3>
+                    <p>Teste dein Wissen mit Musterprüfungen</p>
+                    <ul class="resource-list">
+                        <li><a href="#"><i class="fas fa-download"></i> Python Grundlagen Test</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Algorithmen Übung</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Web-Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Lernmaterialien</h3>
+                    <p>Empfohlene Ressourcen zum Lernen</p>
+                    <ul class="resource-list">
+                        <li><a href="https://www.python.org/about/gettingstarted/" target="_blank"><i class="fas fa-external-link-alt"></i> Python Tutorial</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank"><i class="fas fa-external-link-alt"></i> W3Schools</a></li>
+                        <li><a href="https://stackoverflow.com/" target="_blank"><i class="fas fa-external-link-alt"></i> Stack Overflow</a></li>
+                    </ul>
+                </div>
+                <div class="subject-card featured">
+                    <div class="card-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Interaktive Übungen</h3>
+                    <p>Lerne spielerisch durch praktische Aufgaben</p>
+                    <div class="interactive-exercises">
+                        <button class="exercise-btn" onclick="window.open('https://www.codingame.com/', '_blank')">
+                            <i class="fas fa-code"></i> Coding Challenges
+                        </button>
+                        <button class="exercise-btn" onclick="window.open('https://blockly.games/', '_blank')">
+                            <i class="fas fa-puzzle-piece"></i> Blockly Games
+                        </button>
+                        <button class="exercise-btn" onclick="window.open('https://codecombat.com/', '_blank')">
+                            <i class="fas fa-dragon"></i> CodeCombat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deutsch Section -->
+    <section id="deutsch" class="subject-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-book subject-icon"></i>
+                <h2>Deutsch</h2>
+            </div>
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Lehrplan</h3>
+                    <p>Aktuelle Themen und Lernziele im Überblick</p>
+                    <ul class="curriculum-list">
+                        <li>Textanalyse & Interpretation</li>
+                        <li>Kreatives Schreiben</li>
+                        <li>Grammatik & Rechtschreibung</li>
+                        <li>Lektüre & Literaturgeschichte</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Details ansehen</a>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Prüfungstermine</h3>
+                    <p>Wichtige Termine im Schuljahr</p>
+                    <div class="exam-dates">
+                        <div class="exam-date">
+                            <span class="date">08.03.2026</span>
+                            <span class="exam-name">Aufsatz</span>
+                        </div>
+                        <div class="exam-date">
+                            <span class="date">17.05.2026</span>
+                            <span class="exam-name">Textanalyse</span>
+                        </div>
+                        <div class="exam-date">
+                            <span class="date">05.07.2026</span>
+                            <span class="exam-name">Abschlussprüfung</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Übungsprüfungen</h3>
+                    <p>Teste dein Wissen mit Musterprüfungen</p>
+                    <ul class="resource-list">
+                        <li><a href="#"><i class="fas fa-download"></i> Grammatik Test</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Textinterpretation</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Rechtschreibung Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Lernmaterialien</h3>
+                    <p>Empfohlene Ressourcen zum Lernen</p>
+                    <ul class="resource-list">
+                        <li><a href="https://www.duden.de/" target="_blank"><i class="fas fa-external-link-alt"></i> Duden Online</a></li>
+                        <li><a href="https://www.projekt-gutenberg.org/" target="_blank"><i class="fas fa-external-link-alt"></i> Projekt Gutenberg</a></li>
+                        <li><a href="https://www.dwds.de/" target="_blank"><i class="fas fa-external-link-alt"></i> DWDS Wörterbuch</a></li>
+                    </ul>
+                </div>
+                <div class="subject-card featured">
+                    <div class="card-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Interaktive Übungen</h3>
+                    <p>Lerne spielerisch durch praktische Aufgaben</p>
+                    <div class="interactive-exercises">
+                        <button class="exercise-btn" onclick="window.open('https://www.schlaukopf.de/', '_blank')">
+                            <i class="fas fa-brain"></i> Schlaukopf Quiz
+                        </button>
+                        <button class="exercise-btn" onclick="window.open('https://learningapps.org/', '_blank')">
+                            <i class="fas fa-pen-fancy"></i> Learning Apps
+                        </button>
+                        <button class="exercise-btn" onclick="window.open('https://www.antonapp.com/', '_blank')">
+                            <i class="fas fa-book-reader"></i> Anton App
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sport Section -->
+    <section id="sport" class="subject-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-running subject-icon"></i>
+                <h2>Sport</h2>
+            </div>
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Lehrplan</h3>
+                    <p>Aktuelle Themen und Lernziele im Überblick</p>
+                    <ul class="curriculum-list">
+                        <li>Leichtathletik</li>
+                        <li>Ballsportarten (Fußball, Basketball)</li>
+                        <li>Turnen & Gymnastik</li>
+                        <li>Fitness & Gesundheit</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Details ansehen</a>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Prüfungstermine</h3>
+                    <p>Wichtige Termine im Schuljahr</p>
+                    <div class="exam-dates">
+                        <div class="exam-date">
+                            <span class="date">20.03.2026</span>
+                            <span class="exam-name">Leichtathletik Test</span>
+                        </div>
+                        <div class="exam-date">
+                            <span class="date">29.05.2026</span>
+                            <span class="exam-name">Ball-Skills</span>
+                        </div>
+                        <div class="exam-date">
+                            <span class="date">15.07.2026</span>
+                            <span class="exam-name">Fitness-Check</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Übungsprüfungen</h3>
+                    <p>Teste dein Wissen mit Musterprüfungen</p>
+                    <ul class="resource-list">
+                        <li><a href="#"><i class="fas fa-download"></i> Regelkunde Quiz</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Trainingsplan Vorlage</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Fitness-Theorie Test</a></li>
+                    </ul>
+                </div>
+                <div class="subject-card">
+                    <div class="card-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Lernmaterialien</h3>
+                    <p>Empfohlene Ressourcen zum Lernen</p>
+                    <ul class="resource-list">
+                        <li><a href="https://www.sportunterricht.de/" target="_blank"><i class="fas fa-external-link-alt"></i> Sportunterricht.de</a></li>
+                        <li><a href="https://www.sportschau.de/" target="_blank"><i class="fas fa-external-link-alt"></i> Sportschau</a></li>
+                        <li><a href="https://www.fitforfun.de/" target="_blank"><i class="fas fa-external-link-alt"></i> Fit for Fun</a></li>
+                    </ul>
+                </div>
+                <div class="subject-card featured">
+                    <div class="card-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Interaktive Übungen</h3>
+                    <p>Lerne spielerisch durch praktische Aufgaben</p>
+                    <div class="interactive-exercises">
+                        <button class="exercise-btn" onclick="window.open('https://www.youtube.com/results?search_query=home+workout', '_blank')">
+                            <i class="fas fa-dumbbell"></i> Home Workouts
+                        </button>
+                        <button class="exercise-btn" onclick="window.open('https://learningapps.org/', '_blank')">
+                            <i class="fas fa-futbol"></i> Sport-Quiz
+                        </button>
+                        <button class="exercise-btn" onclick="window.open('https://www.sportunterricht.de/sportspiele/', '_blank')">
+                            <i class="fas fa-trophy"></i> Sportspiele
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-envelope subject-icon"></i>
+                <h2>Kontakt</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Fragen? Ich bin für dich da!</h3>
+                    <p>Bei Fragen zu den Unterrichtsinhalten, Prüfungen oder allgemeinen Anliegen kannst du mich jederzeit erreichen.</p>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>E-Mail</h4>
+                            <a href="mailto:alberto.cabrera@esg.nrw.schule">alberto.cabrera@esg.nrw.schule</a>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <h4>Microsoft Teams</h4>
+                            <a href="mailto:a.cabrera@191401.schulen-bn.de">a.cabrera@191401.schulen-bn.de</a>
+                        </div>
+                    </div>
+                    <div class="office-hours">
+                        <h4><i class="fas fa-clock"></i> Sprechzeiten</h4>
+                        <p>Montag - Freitag: 8:00 - 16:00 Uhr</p>
+                        <p class="note">Antworte in der Regel innerhalb von 24 Stunden</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Elisabeth-Selbert-Gesamtschule</h4>
+                    <p>Lernplattform für Informatik, Deutsch und Sport</p>
+                    <p class="school-location"><i class="fas fa-map-marker-alt"></i> Bonn, Deutschland</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Schnellzugriff</h4>
+                    <ul class="footer-links">
+                        <li><a href="#informatik">Informatik</a></li>
+                        <li><a href="#deutsch">Deutsch</a></li>
+                        <li><a href="#sport">Sport</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p><i class="fas fa-envelope"></i> alberto.cabrera@esg.nrw.schule</p>
+                    <p><i class="fab fa-microsoft"></i> a.cabrera@191401.schulen-bn.de</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elisabeth-Selbert-Gesamtschule, Bonn. Alle Rechte vorbehalten.</p>
+                <p class="made-with">Erstellt mit <i class="fas fa-heart"></i> für unsere Schüler</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

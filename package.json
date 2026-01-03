@@ -1,0 +1,13 @@
+{
+  "name": "esg-lernplattform",
+  "version": "1.0.0",
+  "description": "Lernplattform für Elisabeth-Selbert-Gesamtschule, Bonn - Informatik, Deutsch und Sport",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/",
+    "dev": "npx live-server --port=3000"
+  },
+  "keywords": ["education", "learning", "school", "esg"],
+  "author": "Alberto Cabrera <alberto.cabrera@esg.nrw.schule>",
+  "private": true
+}
